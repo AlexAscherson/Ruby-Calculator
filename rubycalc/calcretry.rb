@@ -44,6 +44,36 @@ def advancedcalc
   gets
 end
 
+def mortgagecalc
+  puts "Loan (Â£)"
+  loan = gets.to_f
+  puts "APR"
+  apr = gets.to_f / 100 / 12
+  puts "Term"
+  term = gets.to_f
+
+  temp = ((1 + apr) **term)
+  payment = (loan * apr * temp) / (temp - 1)
+
+  puts payment
+  gets
+end
+
+def bmicalc
+  puts "enter mass"
+  mass = gets.to_f
+  puts "enter height"
+  height = gets.to_f
+
+  # console.log(mass, height, mass / **(height, 2))
+  
+  bmi = (mass / height)/height
+
+  puts bmi
+  gets
+end
+
+
 options = chooseoperation
 
 while options != 'q'
@@ -53,9 +83,9 @@ while options != 'q'
   when 'a'
     advancedcalc
   when 'm'
-    mortgage_calc
+    mortgagecalc
   when 'i'
-    bmi_calc
+    bmicalc
   when 't'
     trip_calc
   end
