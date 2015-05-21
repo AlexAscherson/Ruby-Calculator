@@ -1,8 +1,11 @@
 require_relative '../lib/bike.rb'
 
+# i dont really understand why there were so many @ in last homework but none in here, 
+# or what the option thing was about
+
 #We're describing the functionality of a specific class, Bike.
 describe Bike do
-  let(:bike) { Bike.new }
+  let(:bike) { Bike.new } 
    #this is a specific feature of behavior
    #that we EXPECT to have
  it 'should not be broken when created' do
