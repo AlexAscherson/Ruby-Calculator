@@ -1,15 +1,16 @@
 class Apartment
 
-    attr_accessor :tenants
+    attr_accessor :number, :price, :occupied, :balcony, :sqft, :bedrooms, :bathrooms, :tenants 
+    # allow get and push as a .method
 
-
- def initialize (options = {})
-   @price = options[:price]
-   @occupied = options[:occupied]
-   @balcony = options[:balcony]
-   @sqft = options[:sqft]
-   @bedrooms = options[:bedrooms]
-   @bathrooms = options[:bathrooms]
-   @tenants = options[:tenants] || []
+ def initialize (number,price, occupied, balcony, sqft, bedrooms,bathrooms,tenants)
+   @number = number
+   @price = price
+   @occupied = occupied
+   @balcony = balcony
+   @sqft = sqft
+   @bedrooms = bedrooms
+   @bathrooms = bathrooms
+   @tenants = []
  end
 end

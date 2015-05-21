@@ -1,12 +1,12 @@
 class Tenant
 
-  attr_accessor :apartment, :name
+  attr_accessor :name, :age, :sex, :apartment
 
-  def initialize(options = {})
-    @name = options [:name]
-    @age = options[:age]
-    @sex = options[:sex]
-    @apartment = options[:apartment] || nil
+  def initialize(name, age, sex, apartment)
+    @name =  name
+    @age = age
+    @sex = sex
+    @apartment = apartment || nil
   end
 
 end
